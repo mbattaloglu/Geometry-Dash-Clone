@@ -4,7 +4,7 @@ using Game.Ground.Scroll;
 using System.Collections;
 using Game.Player.Visual;
 using Game.Player.Animator;
-using Game.Portal.PortalMovement;
+using Game.Object.Abstract.Controller;
 
 namespace Game.General.Logic
 {
@@ -34,6 +34,8 @@ namespace Game.General.Logic
 
         [SerializeField]
         private Transform startingPoint;
+        [SerializeField]
+        private Transform spawnedObjects;
 
         [SerializeField]
         private GameObject player;
@@ -88,39 +90,17 @@ namespace Game.General.Logic
 
         public void DestroyObstacles()
         {
-            GameObject[] obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
-            GameObject[] portals = GameObject.FindGameObjectsWithTag("Portal");
-            GameObject[] finish = GameObject.FindGameObjectsWithTag("Finish");
-            foreach (var obstacle in obstacles)
+            foreach (Transform obstacle in spawnedObjects)
             {
-                Destroy(obstacle);
+                Destroy(obstacle.gameObject);
             }
-            foreach (var portal in portals)
-            {
-                Destroy(portal);
-            }
-            foreach (var finisher in finish)
-            {
-                Destroy(finisher);
-            } 
         }
 
         public void StopObstacles()
         {
-            GameObject[] obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
-            GameObject[] portals = GameObject.FindGameObjectsWithTag("Portal");
-            GameObject[] finish = GameObject.FindGameObjectsWithTag("Finish");
-            foreach (var obstacle in obstacles)
+            foreach (Transform obstacle in spawnedObjects)
             {
-                obstacle.GetComponent<ObstacleMovement>().enabled = false;
-            }
-            foreach (var portal in portals)
-            {
-                portal.GetComponent<PortalMovement>().enabled = false;
-            }
-            foreach (var finisher in finish)
-            {
-                finisher.GetComponent<PortalMovement>().enabled = false;
+                obstacle.GetComponent<IObjectController>().Stop();
             }
         }
 
@@ -135,7 +115,7 @@ namespace Game.General.Logic
 
         public void ResetPlayer()
         {
-            
+
             player.GetComponent<Rigidbody2D>().isKinematic = false;
             player.GetComponent<Rigidbody2D>().simulated = true;
             player.GetComponent<PlayerController>().enabled = true;

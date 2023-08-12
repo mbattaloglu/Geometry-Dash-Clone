@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7629127734896431210}
-  - component: {fileID: 8997294889163143557}
   - component: {fileID: 5780225525317145661}
   - component: {fileID: 1907029668493825225}
+  - component: {fileID: 5237613780283668919}
   m_Layer: 0
   m_Name: Triangle Group
   m_TagString: Obstacle
@@ -36,18 +36,6 @@ Transform:
   - {fileID: 5229480829378076196}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8997294889163143557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 33591567155475423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3b652f98fbfbdc4ba0daab629a099e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!60 &5780225525317145661
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -144,6 +132,19 @@ PolygonCollider2D:
       - {x: 0.42704076, y: 0.3714551}
       - {x: -0.07936102, y: -0.49682677}
   m_UseDelaunayMesh: 0
+--- !u!114 &5237613780283668919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33591567155475423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf11a88842e258040b4fc460fc3f7598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
 --- !u!1 &1855988234943972607
 GameObject:
   m_ObjectHideFlags: 0

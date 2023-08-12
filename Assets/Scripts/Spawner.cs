@@ -7,6 +7,8 @@ public class Spawner : MonoBehaviour
     private float spawnFrequency = 3f;
     [SerializeField]
     private GameObject[] obstacles;
+    [SerializeField]
+    private Transform spawnedObstacles;
 
     private void OnEnable()
     {
@@ -25,7 +27,7 @@ public class Spawner : MonoBehaviour
         foreach (GameObject obstacle in obstacles)
         {
             Vector3 spawnPosition = new Vector3(transform.position.x, obstacle.transform.position.y, obstacle.transform.position.z);
-            Instantiate(obstacle, spawnPosition, obstacle.transform.rotation);
+            Instantiate(obstacle, spawnPosition, obstacle.transform.rotation, spawnedObstacles);
             yield return new WaitForSeconds(spawnFrequency);
         }
     }

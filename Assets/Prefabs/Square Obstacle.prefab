@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1713291715241254544}
   - component: {fileID: 4567705181259136832}
   - component: {fileID: 4011433787806662014}
-  - component: {fileID: -725366331326139094}
+  - component: {fileID: 3726966440816240673}
   m_Layer: 0
   m_Name: Square Obstacle
   m_TagString: Obstacle
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-725366331326139094
+--- !u!114 &3726966440816240673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,6 +140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8594725481841962115}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3b652f98fbfbdc4ba0daab629a099e5, type: 3}
+  m_Script: {fileID: 11500000, guid: bf11a88842e258040b4fc460fc3f7598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 8

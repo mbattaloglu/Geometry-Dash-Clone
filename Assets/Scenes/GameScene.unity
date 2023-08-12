@@ -6222,6 +6222,7 @@ MonoBehaviour:
   - {fileID: 8594725481841962115, guid: 209509828dcfda345a2735729e8e3435, type: 3}
   - {fileID: 33591567155475423, guid: d0a007a6c6b52ae4daae73f0a0403f72, type: 3}
   - {fileID: 7991598261417110287, guid: 21ea493500180b74d8e908b372016f9a, type: 3}
+  spawnedObstacles: {fileID: 1431999650}
 --- !u!4 &928808054
 Transform:
   m_ObjectHideFlags: 0
@@ -16976,6 +16977,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1431999649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1431999650}
+  m_Layer: 0
+  m_Name: Spawned Objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1431999650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431999649}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1516049470
 GameObject:
   m_ObjectHideFlags: 0
@@ -17714,6 +17746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingPoint: {fileID: 323311918}
+  spawnedObjects: {fileID: 1431999650}
   player: {fileID: 1752835810}
   spawner: {fileID: 928808052}
   ground: {fileID: 327244030}
@@ -28262,3 +28295,4 @@ SceneRoots:
   - {fileID: 1429792133}
   - {fileID: 1117054084}
   - {fileID: 2475443}
+  - {fileID: 1431999650}

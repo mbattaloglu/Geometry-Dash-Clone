@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 5912176381937679826}
   - component: {fileID: 7155047589131260135}
   - component: {fileID: 3595198356467981259}
-  - component: {fileID: 7425094437828349191}
+  - component: {fileID: 8346976903779381992}
   m_Layer: 0
   m_Name: Finish Portal
   m_TagString: Finish
@@ -163,7 +163,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7425094437828349191
+--- !u!114 &8346976903779381992
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,6 +172,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7991598261417110287}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44877315d25beba4e9fecd3a95fe3011, type: 3}
+  m_Script: {fileID: 11500000, guid: b0ae95ed7e790e44db621f3154aa7596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 8
